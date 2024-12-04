@@ -8,6 +8,40 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+      height: 100%;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+      min-height: 100%;
+      overflow-x: hidden;
+      position: relative;
+      scroll-padding-top: 2rem;
+    }
+
+    /* Modern scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* Keep your existing gradient and hover card styles */
     .gradient-bg {
       background: linear-gradient(120deg, #1a365d 0%, #2563eb 100%);
     }
@@ -19,31 +53,13 @@
     .hover-card:hover {
       transform: translateY(-5px);
     }
-    html {
-    scroll-behavior: smooth;
-  }
 
-  body {
-    overflow-y: auto;
-  }
-
-  /* Optional: Add custom scrollbar styling */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+    /* Add touch-action for better mobile scrolling */
+    @media (max-width: 768px) {
+      body {
+        touch-action: pan-y pinch-zoom;
+      }
+    }
   </style>
 </head>
 
