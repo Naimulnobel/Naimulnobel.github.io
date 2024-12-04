@@ -1,31 +1,212 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
-    <link rel="stylesheet" href="stylesheet/stylesheet.css">
-    <title>Personal WebSite</title>
-  </head>
-  <body>
-       <div class="profile-picture">
-          <img src="assets/profile.jpg" alt="" class="pp-img">
-       </div>
-       <div class="title">
-          <h1>Naimul Islam Nobel</h1>
-        </div>
-        <div class="profession">
-          <h5>Web Devloper </h5>
-        </div> 
-        <div class="description">  
-          <p>A web developer is a programmer who specializes in, or is specifically engaged in, the development of World Wide Web applications, or applications that are run over HTTP from a web server to a web browser.</p>
-        </div> 
-        <div class="links">
-          <ul> 
-          <li><a href="https://www.facebook.com/naimulislamnobel"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-          <li><a href="https://www.instagram.com/naimulnobel"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-          <li><a href="https://github.com/Naimulnobel"><i class="fa fa-github-square"   aria-hidden="true" ></i></a></li>
-         </ul>
-        </div>
-    </body>
-  </html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naimul Islam Nobel - Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    .gradient-bg {
+      background: linear-gradient(120deg, #1a365d 0%, #2563eb 100%);
+    }
+
+    .hover-card {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .hover-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <div class="gradient-bg text-white py-20">
+    <div class="container mx-auto max-w-4xl px-4">
+      <header class="text-center">
+        <h1 class="text-5xl font-bold mb-4">Naimul Islam Nobel</h1>
+        <p class="text-xl text-blue-100 mb-8">Software Engineer | Backend Developer</p>
+
+        <div class="flex justify-center space-x-6 mt-8">
+          <a href="mailto:nobelnaimulislam@gmail.com"
+            class="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all">
+            <i class="fas fa-envelope text-2xl"></i>
+          </a>
+          <a href="https://github.com/Naimulnobel" target="_blank"
+            class="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a href="https://linkedin.com/in/naimul-islam-nobel-270226183" target="_blank"
+            class="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="container mx-auto max-w-4xl px-4 -mt-10">
+    <!-- About Me -->
+    <section class="bg-white shadow rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">
+        <i class="fas fa-user-circle mr-3"></i>About Me
+      </h2>
+      <p class="text-gray-700">
+        Passionate, self-taught software engineer with a strong background in backend development.
+        Highly motivated and dedicated to creating innovative solutions. Seeking opportunities
+        to leverage my skills in building exceptional products.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="bg-white shadow rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">
+        <i class="fas fa-code mr-3"></i>Technical Skills
+      </h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Python</span>
+        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Node.js</span>
+        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Django</span>
+        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Express</span>
+        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">React</span>
+        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">MongoDB</span>
+        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Docker</span>
+        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">AWS</span>
+        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Jenkins</span>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-6 text-blue-600">
+        <i class="fas fa-briefcase mr-3"></i>Professional Experience
+      </h2>
+
+      <!-- Riseup Labs -->
+      <div class="bg-white shadow rounded-lg p-6 mb-6">
+        <div class="flex justify-between mb-4">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800">Riseup Labs</h3>
+            <p class="text-gray-600">Software Engineer</p>
+          </div>
+          <span class="text-gray-500">July 2023 - Present</span>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h4 class="text-lg font-semibold text-blue-700 mb-2">eCook</h4>
+            <p class="text-gray-600 mb-3">IoT platform for stove data processing and visualization</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Python</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Django</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">PostgreSQL</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">AWS IoT</span>
+            </div>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h4 class="text-lg font-semibold text-blue-700 mb-2">Worktok</h4>
+            <p class="text-gray-600 mb-3">Personalized service provider platform</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Node.js</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Express.js</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h4 class="text-lg font-semibold text-blue-700 mb-2">Jeeto.online</h4>
+            <p class="text-gray-600 mb-3">Engaging gaming platform in Bangladesh</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Node.js</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Express.js</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eaapair Limited -->
+      <div class="bg-white shadow rounded-lg p-6 mb-6">
+        <div class="flex justify-between mb-4">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800">Eaapair Limited</h3>
+            <p class="text-gray-600">Software Engineer</p>
+          </div>
+          <span class="text-gray-500">2022 - 2023</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h4 class="text-lg font-semibold text-blue-700 mb-2">Epos Application</h4>
+            <p class="text-gray-600 mb-3">Business solutions platform for restaurants</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Node.js</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Express.js</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">MongoDB</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Mongoose</span>
+            </div>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h4 class="text-lg font-semibold text-blue-700 mb-2">Attendance App</h4>
+            <p class="text-gray-600 mb-3">Geo-location and face-based attendance system</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Node.js</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Express.js</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dekko Isho Group -->
+      <div class="bg-white shadow rounded-lg p-6">
+        <div class="flex justify-between mb-4">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800">Dekko Isho Group</h3>
+            <p class="text-gray-600">Software Engineer</p>
+          </div>
+          <span class="text-gray-500">2019 - 2021</span>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h4 class="text-lg font-semibold text-blue-700 mb-2">Smart Cut</h4>
+            <p class="text-gray-600 mb-3">Fabric consumption tracking system</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Node.js</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Express.js</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h4 class="text-lg font-semibold text-blue-700 mb-2">Internal POS System</h4>
+            <p class="text-gray-600 mb-3">Point of Sale system for employee management</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">Django</span>
+              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded-md text-xs">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">
+        <i class="fas fa-graduation-cap mr-3"></i>Education
+      </h2>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800">Daffodil International University</h3>
+        <p class="text-gray-600">Bachelor of Science in Software Engineering</p>
+        <p class="text-gray-500">07/2014 - 01/2019</p>
+      </div>
+    </section>
+
+  </div>
+  <footer class="text-center py-4 bg-gray-200 mt-8">
+    <p class="text-gray-600">© 2024 Naimul Islam Nobel. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
