@@ -1,265 +1,717 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naimul Islam Nobel - Software Engineer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-      height: 100%;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    body {
-      min-height: 100%;
-      overflow-x: hidden;
-      position: relative;
-      scroll-padding-top: 2rem;
-    }
-
-    /* Modern scrollbar styling */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-      border-radius: 5px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 5px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #555;
-    }
-
-    /* Keep your existing gradient and hover card styles */
-    .gradient-bg {
-      background: linear-gradient(120deg, #1a365d 0%, #2563eb 100%);
-    }
-
-    .hover-card {
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .hover-card:hover {
-      transform: translateY(-5px);
-    }
-
-    /* Add touch-action for better mobile scrolling */
-    @media (max-width: 768px) {
-      body {
-        touch-action: pan-y pinch-zoom;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naimul Islam Nobel - Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+        height: 100%;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
       }
-    }
-  </style>
-</head>
 
-<body class="bg-gray-50">
+      body {
+        min-height: 100%;
+        overflow-x: hidden;
+        position: relative;
+        scroll-padding-top: 5rem;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+          sans-serif;
+      }
 
-  <!-- Header -->
-  <div class="gradient-bg text-white py-20">
-    <div class="container mx-auto max-w-4xl px-4">
-      <header class="text-center">
-        <h1 class="text-5xl font-bold mb-4">Naimul Islam Nobel</h1>
-        <p class="text-xl text-blue-100 mb-8">Software Engineer | Backend Developer</p>
+      /* Modern scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
 
-        <div class="flex justify-center space-x-6 mt-8">
-          <a href="mailto:nobelnaimulislam@gmail.com"
-            class="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all">
-            <i class="fas fa-envelope text-2xl"></i>
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(120deg, #1e3a8a 0%, #3b82f6 100%);
+      }
+
+      .hover-card {
+        transition: all 0.3s ease-in-out;
+        border-left: 4px solid transparent;
+      }
+
+      .hover-card:hover {
+        transform: translateY(-5px);
+        border-left: 4px solid #3b82f6;
+      }
+
+      .skill-tag {
+        transition: all 0.2s ease;
+      }
+
+      .skill-tag:hover {
+        transform: translateY(-2px);
+      }
+
+      .nav-item {
+        position: relative;
+        cursor: pointer;
+      }
+
+      .nav-item:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: white;
+        transition: width 0.3s ease;
+      }
+
+      .nav-item:hover:after {
+        width: 100%;
+      }
+
+      .profile-image {
+        border: 4px solid white;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        body {
+          touch-action: pan-y pinch-zoom;
+        }
+
+        .profile-container {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-gray-900 shadow-md">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="#" class="text-white font-bold text-xl"
+          >NI<span class="text-blue-400">Nobel</span></a
+        >
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="text-gray-300 hover:text-white nav-item"
+            >About</a
+          >
+          <a href="#skills" class="text-gray-300 hover:text-white nav-item"
+            >Skills</a
+          >
+          <a href="#experience" class="text-gray-300 hover:text-white nav-item"
+            >Experience</a
+          >
+          <a href="#education" class="text-gray-300 hover:text-white nav-item"
+            >Education</a
+          >
+        </div>
+        <div class="flex space-x-3">
+          <a
+            href="mailto:nobelnaimulislam@gmail.com"
+            class="text-white hover:text-blue-400 transition-colors"
+          >
+            <i class="fas fa-envelope text-lg"></i>
           </a>
-          <a href="https://github.com/Naimulnobel" target="_blank"
-            class="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all">
-            <i class="fab fa-github text-2xl"></i>
+          <a
+            href="https://github.com/Naimulnobel"
+            target="_blank"
+            class="text-white hover:text-blue-400 transition-colors"
+          >
+            <i class="fab fa-github text-lg"></i>
           </a>
-          <a href="https://linkedin.com/in/naimul-islam-nobel-270226183" target="_blank"
-            class="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all">
-            <i class="fab fa-linkedin text-2xl"></i>
+          <a
+            href="https://linkedin.com/in/naimul-islam-nobel-270226183"
+            target="_blank"
+            class="text-white hover:text-blue-400 transition-colors"
+          >
+            <i class="fab fa-linkedin text-lg"></i>
           </a>
         </div>
-      </header>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="gradient-bg text-white py-16 md:py-24">
+      <div
+        class="container mx-auto max-w-5xl px-4 profile-container flex items-center"
+      >
+        <img
+          src="assets/profile.jpg"
+          alt="Naimul Islam Nobel"
+          class="profile-image hidden md:block w-56 h-56 rounded-full object-cover mr-8"
+        />
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-3">
+            Naimul Islam Nobel
+          </h1>
+          <p class="text-xl text-blue-100 mb-6">
+            Software Engineer | Backend Developer
+          </p>
+          <p class="text-gray-200 max-w-2xl">
+            Passionate, self-taught software engineer with a strong background
+            in backend development. Highly motivated and dedicated to creating
+            innovative solutions.
+          </p>
+
+          <div class="flex mt-8 space-x-4">
+            <a
+              href="#contact"
+              class="bg-white text-blue-700 px-6 py-2 rounded-lg font-medium hover:bg-blue-100 transition-colors"
+            >
+              Contact Me
+            </a>
+            <a
+              href="#experience"
+              class="bg-transparent border-2 border-white text-white px-6 py-2 rounded-lg font-medium hover:bg-white/10 transition-colors"
+            >
+              View Experience
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="container mx-auto max-w-4xl px-4 -mt-10">
-    <!-- About Me -->
-    <section class="bg-white shadow-lg rounded-xl p-8 mb-8 hover-card">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600">
-        <i class="fas fa-user-circle mr-3"></i>About Me
-      </h2>
-      <p class="text-gray-700 text-lg leading-relaxed">
-        Passionate, self-taught software engineer with a strong background in backend development.
-        Highly motivated and dedicated to creating innovative solutions. Seeking opportunities
-        to leverage my skills in building exceptional products.
-      </p>
-    </section>
 
-    <!-- Skills -->
-    <section class="bg-white shadow-lg rounded-xl p-8 mb-8 hover-card">
-      <h2 class="text-2xl font-bold mb-6 text-blue-600 flex items-center">
-        <i class="fas fa-code mr-3"></i>Technical Skills
-      </h2>
-      <div class="flex flex-wrap gap-3">
-        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Python</span>
-        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Node.js</span>
-        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Django</span>
-        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Express</span>
-        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">React</span>
-        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">MongoDB</span>
-        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">PostgreSQL</span>
-        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Docker</span>
-        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">AWS</span>
-        <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Jenkins</span>
-      </div>
-    </section>
+    <div class="container mx-auto max-w-5xl px-4 -mt-12 md:-mt-16">
+      <!-- About Me -->
+      <section
+        id="about"
+        class="bg-white shadow-lg rounded-xl p-8 mb-10 hover-card"
+      >
+        <h2 class="text-2xl font-bold mb-6 text-blue-700 flex items-center">
+          <i class="fas fa-user-circle text-2xl mr-3"></i>About Me
+        </h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Passionate, self-taught software engineer with a strong background in
+          backend development. Highly motivated and dedicated to creating
+          innovative solutions. Seeking opportunities to leverage my skills in
+          building exceptional products.
+        </p>
+      </section>
 
-    <!-- Work Experience -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold mb-6 text-blue-600 flex items-center">
-        <i class="fas fa-briefcase mr-3"></i>Professional Experience
-      </h2>
+      <!-- Skills -->
+      <section
+        id="skills"
+        class="bg-white shadow-lg rounded-xl p-8 mb-10 hover-card"
+      >
+        <h2 class="text-2xl font-bold mb-8 text-blue-700 flex items-center">
+          <i class="fas fa-code text-2xl mr-3"></i>Technical Skills
+        </h2>
 
-      <!-- Riseup Labs -->
-      <div class="bg-white shadow rounded-lg p-6 mb-6">
-        <div class="flex justify-between mb-4">
-          <div>
-            <h3 class="text-2xl font-bold text-gray-800">Riseup Labs</h3>
-            <p class="text-blue-600 font-medium">Software Engineer</p>
-          </div>
-          <span class="text-gray-500 font-medium">July 2023 - Present</span>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-blue-50 p-6 rounded-xl">
-            <h4 class="text-xl font-semibold text-blue-700 mb-3">eCook</h4>
-            <p class="text-gray-600 mb-4">IoT platform for stove data processing and visualization</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Python</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Django</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">PostgreSQL</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">AWS IoT</span>
-            </div>
-            <a href="https://www.ecookstove.com/" target="_blank"
-              class="inline-flex items-center text-blue-700 hover:text-blue-800">
-              <i class="fas fa-external-link-alt mr-2"></i>Visit Website
-            </a>
-          </div>
-          <div class="bg-blue-50 p-6 rounded-xl">
-            <h4 class="text-xl font-semibold text-blue-700 mb-3">Worktok</h4>
-            <p class="text-gray-600 mb-4">Personalized service provider platform</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Node.js</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Express.js</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">PostgreSQL</span>
-            </div>
-            <a href="https://worktok.org/" target="_blank" class="inline-flex items-center text-blue-700 hover:text-blue-800">
-              <i class="fas fa-external-link-alt mr-2"></i>Visit Website
-            </a>
-          </div>
-          <div class="bg-blue-50 p-6 rounded-xl">
-            <h4 class="text-lg font-semibold text-blue-700 mb-2">Jeeto.online</h4>
-            <p class="text-gray-600 mb-4">Engaging gaming platform in Bangladesh</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Node.js</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Express.js</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">MongoDB</span>
-            </div>
-            <a href="https://jeeto.online/" target="_blank" class="inline-flex items-center text-blue-700 hover:text-blue-800">
-              <i class="fas fa-external-link-alt mr-2"></i>Visit Website
-            </a>
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">
+            Programming Languages
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >Python</span
+            >
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >JavaScript</span
+            >
           </div>
         </div>
-      </div>
 
-      <!-- Eaapair Limited -->
-      <div class="bg-white shadow rounded-lg p-6 mb-6">
-        <div class="flex justify-between mb-4">
-          <div>
-            <h3 class="text-2xl font-bold text-gray-800">Eaapair Limited</h3>
-            <p class="text-blue-600 font-medium">Software Engineer</p>
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">
+            Frameworks & Libraries
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >Node.js</span
+            >
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >Django</span
+            >
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >Express</span
+            >
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >React</span
+            >
           </div>
-          <span class="text-gray-500 font-medium">2022 - 2023</span>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-blue-50 p-6 rounded-xl">
-            <h4 class="text-lg font-semibold text-blue-700 mb-2">Epos Application</h4>
-            <p class="text-gray-600 mb-4">Business solutions platform for restaurants</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Node.js</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Express.js</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">MongoDB</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Mongoose</span>
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">
+            Database Technologies
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >MongoDB</span
+            >
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >PostgreSQL</span
+            >
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >MySQL</span
+            >
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-gray-700 mb-3">
+            DevOps & Tools
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >Docker</span
+            >
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >AWS</span
+            >
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >Jenkins</span
+            >
+            <span
+              class="skill-tag bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm"
+              >Git</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section id="experience" class="mb-10">
+        <h2 class="text-2xl font-bold mb-8 text-blue-700 flex items-center">
+          <i class="fas fa-briefcase text-2xl mr-3"></i>Professional Experience
+        </h2>
+
+        <!-- Timeline layout -->
+        <div class="relative border-l-2 border-blue-500 ml-3 pl-8 pb-6">
+          <!-- Riseup Labs -->
+          <div class="mb-12 relative">
+            <div
+              class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[41px] top-1"
+            ></div>
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                  <div>
+                    <h3 class="text-2xl font-bold text-gray-800">
+                      Riseup Labs
+                    </h3>
+                    <p class="text-blue-600 font-medium">Software Engineer</p>
+                  </div>
+                  <span
+                    class="text-gray-500 font-medium mt-2 md:mt-0 bg-gray-100 px-3 py-1 rounded-full text-sm inline-block"
+                    >July 2023 - Present</span
+                  >
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                  <div
+                    class="bg-blue-50 p-6 rounded-xl hover:shadow-md transition-shadow"
+                  >
+                    <h4 class="text-xl font-semibold text-blue-700 mb-3">
+                      eCook
+                    </h4>
+                    <p class="text-gray-600 mb-4">
+                      IoT platform for stove data processing and visualization
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Python</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Django</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >PostgreSQL</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >AWS IoT</span
+                      >
+                    </div>
+                    <a
+                      href="https://www.ecookstove.com/"
+                      target="_blank"
+                      class="inline-flex items-center text-blue-700 hover:text-blue-800"
+                    >
+                      <i class="fas fa-external-link-alt mr-2"></i>Visit Website
+                    </a>
+                  </div>
+
+                  <div
+                    class="bg-blue-50 p-6 rounded-xl hover:shadow-md transition-shadow"
+                  >
+                    <h4 class="text-xl font-semibold text-blue-700 mb-3">
+                      Worktok
+                    </h4>
+                    <p class="text-gray-600 mb-4">
+                      Personalized service provider platform
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Node.js</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Express.js</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >PostgreSQL</span
+                      >
+                    </div>
+                    <a
+                      href="https://worktok.org/"
+                      target="_blank"
+                      class="inline-flex items-center text-blue-700 hover:text-blue-800"
+                    >
+                      <i class="fas fa-external-link-alt mr-2"></i>Visit Website
+                    </a>
+                  </div>
+
+                  <div
+                    class="bg-blue-50 p-6 rounded-xl hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1"
+                  >
+                    <h4 class="text-xl font-semibold text-blue-700 mb-3">
+                      Jeeto.online
+                    </h4>
+                    <p class="text-gray-600 mb-4">
+                      Engaging gaming platform in Bangladesh
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Node.js</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Express.js</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >MongoDB</span
+                      >
+                    </div>
+                    <a
+                      href="https://jeeto.online/"
+                      target="_blank"
+                      class="inline-flex items-center text-blue-700 hover:text-blue-800"
+                    >
+                      <i class="fas fa-external-link-alt mr-2"></i>Visit Website
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="bg-blue-50 p-6 rounded-xl">
-            <h4 class="text-lg font-semibold text-blue-700 mb-2">Attendance App</h4>
-            <p class="text-gray-600 mb-4">Geo-location and face-based attendance system</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Node.js</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Express.js</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">MongoDB</span>
+
+          <!-- Eaapair Limited -->
+          <div class="mb-12 relative">
+            <div
+              class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[41px] top-1"
+            ></div>
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+              <div class="p-6 border-b border-gray-100">
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                  <div>
+                    <h3 class="text-2xl font-bold text-gray-800">
+                      Eaapair Limited
+                    </h3>
+                    <p class="text-blue-600 font-medium">Software Engineer</p>
+                  </div>
+                  <span
+                    class="text-gray-500 font-medium mt-2 md:mt-0 bg-gray-100 px-3 py-1 rounded-full text-sm inline-block"
+                    >2022 - 2023</span
+                  >
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                  <div
+                    class="bg-blue-50 p-6 rounded-xl hover:shadow-md transition-shadow"
+                  >
+                    <h4 class="text-xl font-semibold text-blue-700 mb-3">
+                      Epos Application
+                    </h4>
+                    <p class="text-gray-600 mb-4">
+                      Business solutions platform for restaurants
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Node.js</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Express.js</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >MongoDB</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Mongoose</span
+                      >
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-blue-50 p-6 rounded-xl hover:shadow-md transition-shadow"
+                  >
+                    <h4 class="text-xl font-semibold text-blue-700 mb-3">
+                      Attendance App
+                    </h4>
+                    <p class="text-gray-600 mb-4">
+                      Geo-location and face-based attendance system
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Node.js</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Express.js</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >MongoDB</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dekko Isho Group -->
+          <div class="relative">
+            <div
+              class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[41px] top-1"
+            ></div>
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+              <div class="p-6">
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                  <div>
+                    <h3 class="text-2xl font-bold text-gray-800">
+                      Dekko Isho Group
+                    </h3>
+                    <p class="text-blue-600 font-medium">Software Engineer</p>
+                  </div>
+                  <span
+                    class="text-gray-500 font-medium mt-2 md:mt-0 bg-gray-100 px-3 py-1 rounded-full text-sm inline-block"
+                    >2019 - 2021</span
+                  >
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                  <div
+                    class="bg-blue-50 p-6 rounded-xl hover:shadow-md transition-shadow"
+                  >
+                    <h4 class="text-xl font-semibold text-blue-700 mb-3">
+                      Smart Cut
+                    </h4>
+                    <p class="text-gray-600 mb-4">
+                      Fabric consumption tracking system
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Node.js</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Express.js</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >PostgreSQL</span
+                      >
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-blue-50 p-6 rounded-xl hover:shadow-md transition-shadow"
+                  >
+                    <h4 class="text-xl font-semibold text-blue-700 mb-3">
+                      Internal POS System
+                    </h4>
+                    <p class="text-gray-600 mb-4">
+                      Point of Sale system for employee management
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >Django</span
+                      >
+                      <span
+                        class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm"
+                        >MySQL</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Dekko Isho Group -->
-      <div class="bg-white shadow rounded-lg p-6 mb-6">
-        <div class="flex justify-between mb-4">
-          <div>
-            <h3 class="text-2xl font-bold text-gray-800">Dekko Isho Group</h3>
-            <p class="text-blue-600 font-medium">Software Engineer</p>
-          </div>
-          <span class="text-gray-500 font-medium">2019 - 2021</span>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-blue-50 p-6 rounded-xl">
-            <h4 class="text-xl font-semibold text-blue-700 mb-3">Smart Cut</h4>
-            <p class="text-gray-600 mb-4">Fabric consumption tracking system</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Node.js</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Express.js</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">PostgreSQL</span>
-            </div>
-          </div>
-          <div class="bg-blue-50 p-6 rounded-xl">
-            <h4 class="text-xl font-semibold text-blue-700 mb-3">Internal POS System</h4>
-            <p class="text-gray-600 mb-4">Point of Sale system for employee management</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">Django</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm">MySQL</span>
-            </div>
+      <!-- Education -->
+      <section
+        id="education"
+        class="bg-white shadow-lg rounded-xl p-8 mb-10 hover-card"
+      >
+        <h2 class="text-2xl font-bold mb-8 text-blue-700 flex items-center">
+          <i class="fas fa-graduation-cap text-2xl mr-3"></i>Education
+        </h2>
+        <div class="relative border-l-2 border-blue-300 ml-3 pl-8">
+          <div class="mb-4 relative">
+            <div
+              class="absolute w-4 h-4 bg-blue-300 rounded-full -left-[41px] top-1"
+            ></div>
+            <h3 class="text-xl font-bold text-gray-800">
+              Daffodil International University
+            </h3>
+            <p class="text-blue-600 font-medium">
+              Bachelor of Science in Software Engineering
+            </p>
+            <p class="text-gray-500 mt-2 flex items-center">
+              <i class="far fa-calendar-alt mr-2"></i>
+              July 2014 - January 2019
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Education -->
-    <section class="bg-white shadow-lg rounded-xl p-8 hover-card">
-      <h2 class="text-2xl font-bold mb-6 text-blue-600 flex items-center">
-        <i class="fas fa-graduation-cap text-3xl mr-4"></i>Education
-      </h2>
-      <div>
-        <h3 class="text-xl font-bold text-gray-800">Daffodil International University</h3>
-        <p class="text-blue-600">Bachelor of Science in Software Engineering</p>
-        <p class="text-gray-500 mt-2">07/2014 - 01/2019</p>
-      </div>
-    </section>
-
-  </div>
-  <footer class="gradient-bg text-white py-6 mt-12">
-    <div class="container mx-auto max-w-4xl px-4">
-      <p class="text-center">© 2024 Naimul Islam Nobel. All Rights Reserved.</p>
+      <!-- Contact -->
+      <section
+        id="contact"
+        class="bg-gradient-to-br from-blue-800 to-blue-600 shadow-lg rounded-xl p-8 mb-10 text-white"
+      >
+        <h2 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-paper-plane text-2xl mr-3"></i>Get In Touch
+        </h2>
+        <p class="mb-6">
+          I'm currently open to new opportunities and collaborations. Feel free
+          to reach out!
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="mailto:nobelnaimulislam@gmail.com"
+            class="flex items-center bg-white/20 hover:bg-white/30 transition-all px-5 py-3 rounded-lg"
+          >
+            <i class="fas fa-envelope mr-3"></i>
+            nobelnaimulislam@gmail.com
+          </a>
+          <a
+            href="https://github.com/Naimulnobel"
+            target="_blank"
+            class="flex items-center bg-white/20 hover:bg-white/30 transition-all px-5 py-3 rounded-lg"
+          >
+            <i class="fab fa-github mr-3"></i>
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/naimul-islam-nobel-270226183"
+            target="_blank"
+            class="flex items-center bg-white/20 hover:bg-white/30 transition-all px-5 py-3 rounded-lg"
+          >
+            <i class="fab fa-linkedin mr-3"></i>
+            LinkedIn
+          </a>
+        </div>
+      </section>
     </div>
-  </footer>
-</body>
 
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+      <div class="container mx-auto max-w-5xl px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <h3 class="text-xl font-bold">Naimul Islam Nobel</h3>
+            <p class="text-gray-400">Software Engineer | Backend Developer</p>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="mailto:nobelnaimulislam@gmail.com"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="fas fa-envelope text-lg"></i>
+            </a>
+            <a
+              href="https://github.com/Naimulnobel"
+              target="_blank"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="fab fa-github text-lg"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/naimul-islam-nobel-270226183"
+              target="_blank"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="mt-6 pt-6 border-t border-gray-800 text-center text-gray-400"
+        >
+          <p>© 2024 Naimul Islam Nobel. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
